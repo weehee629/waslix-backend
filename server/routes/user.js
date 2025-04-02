@@ -129,7 +129,7 @@ router.post(`/signup`, async (req, res) => {
     // Create a JWT token for verification purposes
     const token = jwt.sign(
       { email: user.email, id: user._id },
-      process.env.JSON_WEB_TOKEN_SECRET_KEY
+    "verma9378"
     );
 
     // res.cookie('token', token, {
@@ -210,7 +210,7 @@ router.put(`/verifyAccount/emailVerify/:id`, async (req, res) => {
     // Create a JWT token for verification purposes
     const token = jwt.sign(
       { email: existingUser.email, id: existingUser._id },
-      process.env.JSON_WEB_TOKEN_SECRET_KEY
+     "verma9378"
     );
 
     // Send success response
@@ -299,7 +299,7 @@ router.post(`/signin`, async (req, res) => {
 
     const token = jwt.sign(
       { email: existingUser.email, id: existingUser._id },
-      process.env.JSON_WEB_TOKEN_SECRET_KEY
+     "verma9378"
     );
 
     return res.status(200).send({
@@ -426,7 +426,7 @@ router.post(`/authWithGoogle`, async (req, res) => {
 
       const token = jwt.sign(
         { email: result.email, id: result._id },
-        process.env.JSON_WEB_TOKEN_SECRET_KEY
+       "verma9378"
       );
 
       return res.status(200).send({
@@ -438,7 +438,7 @@ router.post(`/authWithGoogle`, async (req, res) => {
       const existingUser = await User.findOne({ email: email });
       const token = jwt.sign(
         { email: existingUser.email, id: existingUser._id },
-        process.env.JSON_WEB_TOKEN_SECRET_KEY
+        "verma9378"
       );
 
       return res.status(200).send({

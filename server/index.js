@@ -52,7 +52,7 @@ app.use(`/api/homeBottomBanners`, homeBottomBannerSchema);
 
 
 //Database
-mongoose.connect(process.env.CONNECTION_STRING, {
+mongoose.connect("mongodb://localhost:27017/waslix_e-commerce", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
